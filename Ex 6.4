@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DaysOfAMonth {
+public class ex64 {
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -9,17 +9,12 @@ public class DaysOfAMonth {
 		int day = 0;
 		String month;
 		
-		while(true) {
-			System.out.print("Enter month: ");
-			month = input.nextLine();
-			System.out.print("Enter year: ");
-			year = input.nextInt();
-			input.nextLine();
+		System.out.print("Enter month: ");
+		month = input.nextLine();
+		System.out.print("Enter year: ");
+		year = input.nextInt();
 			
-			if(year < 0) {
-				System.out.print("Invalid year.\n");
-				continue;
-			}
+		if(year >= 0) {
 			if(month.equals("January") || month.equals("Jan") || month.equals("Jan.") || month.equals("1") ||
 			   month.equals("March") || month.equals("Mar") || month.equals("Mar.") || month.equals("3") || 
 			   month.equals("May") || month.equals("5") || 
@@ -45,11 +40,13 @@ public class DaysOfAMonth {
 			}
 			if(day > 0) {
 				System.out.print(day + " days.");
-				break;
 			}
 			else {
-				System.out.print("Invalid month.\n");
-			}
+				System.out.print("Invalid input.\n");
+			}	
+		}
+		else {
+			System.out.print("Invalid input.\n");
 		}
 		
 	}
